@@ -13,19 +13,25 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
-export default async function CardWrapper() {
+export default async function CardWrapper(props: any) {
   return (
     <>
-      {/* NOTE: comment in this code when you get to this point in the course */}
-
-      {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
-      <Card title="Pending" value={totalPendingInvoices} type="pending" />
-      <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+      <Card
+        title="Collected"
+        value={props.totalPaidInvoices}
+        type="collected"
+      />
+      <Card title="Pending" value={props.totalPendingInvoices} type="pending" />
+      <Card
+        title="Total Invoices"
+        value={props.numberOfInvoices}
+        type="invoices"
+      />
       <Card
         title="Total Customers"
-        value={numberOfCustomers}
+        value={props.numberOfCustomers}
         type="customers"
-      /> */}
+      />
     </>
   );
 }
